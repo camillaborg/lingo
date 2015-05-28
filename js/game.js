@@ -2,12 +2,11 @@ var ordlista = ["mjauu", "malin", "banan"];
 var valtOrd = ordlista[Math.floor(Math.random() * 3)];
 var counts = 3;
 var tries = 0;
+var points = 0;
 console.log(valtOrd);
 // Slumpar ett ord från arrayen
 
 var button = document.getElementsByTagName("button")[0]; // Vi vill ha tillbaka den första knappen button[plats0]
-
-
 
     button.addEventListener("click", function () {
 
@@ -29,7 +28,8 @@ var button = document.getElementsByTagName("button")[0]; // Vi vill ha tillbaka 
 
 
         if (användarOrd === valtOrd) {
-            alert("Grattis!")
+            points += 5000;
+            alert("Grattis! Du vann " + points + "poäng!")
         }
         else if (tries < counts) {
             alert("Försök igen");
@@ -37,6 +37,7 @@ var button = document.getElementsByTagName("button")[0]; // Vi vill ha tillbaka 
         else if (tries >= counts) {
             alert("Dina försök är slut");
         }
+
 
     }
     });
