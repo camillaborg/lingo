@@ -1,5 +1,7 @@
 body{
-    background-color: red;
+    background-color: white;
+    color: black;
+    font-family: Helvetica;
 }
 td{
     height: 100px;
